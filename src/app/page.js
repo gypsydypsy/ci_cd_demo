@@ -10,6 +10,10 @@ export default function Home() {
 
   test();
 
+  const test2 = 'hello again';
+
+  console.log(test2);
+
   return (
     <div className={styles.page}>
       <main className={styles.main}>
