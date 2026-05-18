@@ -7,8 +7,10 @@ name: "Continuous Integration"
 
 # Pour toutes les branches : 
 on: 
-  push: 
-  pull-request: 
+  push:
+    branches: ['**']
+  pull_request:
+    branches: ['**'] 
 
 jobs: 
   build:
