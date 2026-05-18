@@ -9,8 +9,6 @@ module.exports = {
   tabWidth: 2,
   // Utilise des espaces au lieu des tabulations
   useTabs: false,
-  // Ajoute une virgule après le dernier élément dans les objets/arrays (ES5 style)
-  trailingComma: 'es5',
   // Normalise les fins de ligne en LF pour éviter les erreurs CRLF
   endOfLine: 'lf',
   // Ajoute un espace entre les accolades et le contenu

@@ -29,12 +29,6 @@
     "lint-staged": "^17.0.4",
     "prettier": "^3.8.3"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "npm run lint && npm run format"
-    }
-  },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
       "npm run format",
