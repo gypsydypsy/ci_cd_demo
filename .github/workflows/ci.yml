@@ -1,0 +1,40 @@
+name: "Continuous Integration"
+
+# Pour restreindre à une ou plusieurs branches 
+# on : 
+#   push: ['main']
+#   pull-request: ['main', 'develop']
+
+# Pour toutes les branches : 
+on: 
+  push: 
+  pull-request: 
+
+jobs: 
+  build:
+    runs-on: ubuntu-latest
+
+    steps: 
+      - name: Checkout
+        uses: actions/checkout@v6.0.2
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v6.4.0
+        with: 
+          node-version: '24.12.0'
+      
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run lint
+        run: npm run lint
+
+      - name: Run format check
+        run: npm run format
+
+      - name : Check commit messages
+        uses: ahmadnassri/action-commit-lint@v2
+        with:
+          config: commitlint.config.cjs
+      
+      
