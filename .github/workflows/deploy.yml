@@ -30,6 +30,8 @@ jobs:
         with:
           target_branch: gh-pages
           build_dir: out
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
 
       # - name: Deploy to netlify
       #   if: github.ref == "refs/heads/main"
