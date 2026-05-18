@@ -10,9 +10,11 @@ export default function Home() {
 
   test();
 
+  const test1 = 'coucou';
+
   const test2 = 'hello again';
 
-  console.log(test2);
+  console.log(test2, test1);
 
   return (
     <div className={styles.page}>
